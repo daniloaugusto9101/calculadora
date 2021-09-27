@@ -43,6 +43,11 @@ body{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.24);
 
 }
+/* CABEÇALHO =====================================================*/
+
+:root{
+    --bt-largura: 30px;
+}
 
 .container__header{
     grid-area: header;
@@ -52,18 +57,60 @@ body{
     margin: 10px;
 }
 
-.link__header{
+#ligar{
+    visibility: hidden;
+}
+
+.header__esq{
     color: var(--bg-color3);
 }
 
+.header__dir__bt{
+    display: block;
+    position: relative;
+    background: var(--bg-color2);
+    width: var(--bt-largura);
+    height: calc(var(--bt-largura)/2);
+    border-radius: calc(var(--bt-largura)/2);
+    cursor: pointer;
+}
+
+.header__dir__bt::before,
+.header__dir__bt::after{
+    content: '';
+    position: absolute;    
+    height: calc(var(--bt-largura)/2);
+    border-radius: calc(var(--bt-largura)/2);    
+    transition: all 0.4s;    
+}
+
+
+.header__dir__bt::before{
+    width: var(--bt-largura);
+}
+
+.header__dir__bt::after{
+    width: calc(var(--bt-largura)/2);
+    background: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.452);    
+}
+
+#ligar:checked + .header__dir__bt::before{
+    background: var(--bg-color3);
+}
+
+#ligar:checked + .header__dir__bt::after{
+    transform: translateX(calc(var(--bt-largura)/2));
+}
+
+/* VISOR =====================================================*/
 .container__visor{
-    /* background: red; */
     grid-area: visor;
     display: flex;
     justify-content: end;
     align-items: end;
     margin: 10px;
-    color: var(--bg-color1);
+    color: var(--bg-color3);
     font-size: 4rem;
 }
 
