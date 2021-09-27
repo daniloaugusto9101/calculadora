@@ -7,6 +7,12 @@ cor4: #829390
 corbg: #94e0d4
 */
 
+:root{
+    --bg-color1: #212b41;
+    --bg-color2: #2e3951;
+    --bg-color3: #1bc7aa;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -26,7 +32,7 @@ body{
 .container{
     height: 500px;
     width: 300px;
-    background: #212b41;
+    background-color: var(--bg-color1);
     border-radius: 20px;
     display: grid;
     grid-template-rows: 1fr 3fr 8fr;
@@ -47,7 +53,7 @@ body{
 }
 
 .link__header{
-    color: #1bc7aa;
+    color: var(--bg-color3);
 }
 
 .container__visor{
@@ -57,12 +63,12 @@ body{
     justify-content: end;
     align-items: end;
     margin: 10px;
-    color: #1bc7aa;
+    color: var(--bg-color1);
     font-size: 4rem;
 }
 
 .container__buttons{
-    background: #2e3951;
+    background-color: var(--bg-color2);
     border-radius: 0 0 20px 20px;
     grid-area: buttons;
     padding: 10px;
@@ -78,17 +84,17 @@ body{
     border-radius: 30PX;
     text-align: center;
     line-height: 50px;
-    color: #1bc7aa;
+    color: var(--bg-color3);
     font-size: 1.5rem;
     cursor: pointer;
 }
 
 .botao--sinais{
-    background: #212b41;
+    background-color: var(--bg-color1);
 }
 
 .botao--igual{
-    color: #212b41;
-    background: #1bc7aa;
+    background-color: var(--bg-color1);
+    background-color: var(--bg-color1);
 }
 
